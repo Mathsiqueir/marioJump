@@ -44,7 +44,7 @@ div{
     position: absolute;
     width: 550px;
     margin: 0;
-    animation: clouds-animation 10s infinite linear;
+    animation: clouds-animation 7s infinite linear;
 }
 
 @keyframes jump { /*por ser um salto ele tem que ter 3 movimentos inicio meio e fim*/
