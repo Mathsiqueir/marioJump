@@ -32,4 +32,5 @@ const loop = setInterval(()=>{
 }, 10)
 
 document.addEventListener('keydown', jump) // o jS ficar em alerta quando qualquer tecla for pressionada ele executara o comando jump
+document.addEventListener('touchstart', jump)
 
