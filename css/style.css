@@ -3,9 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    background-color: rgba(0, 0, 0, 0.655);
+}
 #reset{
     position: absolute;
-    margin: auto;
+    margin: 0 auto;
     bottom: 10%;
     right: 50%;
     
@@ -26,13 +29,13 @@ div{
 .pipe{
     position: absolute; /*para que as imagens não interfiram umas nas outras*/
     bottom: 0;
-    height: 80px;
-    width: 80px;
+    height: 12%;
+    width: 10%;
      /* posicionamento para quando a pipe tocar o mario o jogo terminar*/
     animation: pipe-animation 1.2s infinite linear ;
     
     /* linear para a velocidade ser constante*/
-    /* vamos fazer a imagem atravessar a tela usando o right andando co vá de 0 a 100*/
+    /* vamos fazer a imagem atravessar a tela usando o right andando co vá de 0 a 100 */
     
 }
 
@@ -41,7 +44,7 @@ div{
 .mario{
     position:absolute ;/*para que ele seja posicionado no centro da página*/
     bottom: 0px;
-    width:150px;
+    width: 23%;
     
 }
 .jump{
