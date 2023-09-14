@@ -3,6 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+#reset{
+    position: absolute;
+    margin: auto;
+    bottom: 10%;
+    right: 50%;
+    
+}
 div{
     background-color: rgb(126, 185, 126);
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.555);
