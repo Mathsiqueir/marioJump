@@ -1,0 +1,84 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div{
+    background-color: rgb(126, 185, 126);
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.555);
+}
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid green;
+    margin: auto;
+    position: relative; /*para as imagens ficarem dentro  do border */
+    overflow: hidden; /* tudo que sair da borda fica invisivel */
+    background-image: linear-gradient(to bottom, #87ceeb, #e0f6ff);
+}
+.pipe{
+    position: absolute; /*para que as imagens não interfiram umas nas outras*/
+    bottom: 0;
+    height: 80px;
+    width: 80px;
+     /* posicionamento para quando a pipe tocar o mario o jogo terminar*/
+    animation: pipe-animation 1.2s infinite linear ;
+    
+    /* linear para a velocidade ser constante*/
+    /* vamos fazer a imagem atravessar a tela usando o right andando co vá de 0 a 100*/
+    
+}
+
+
+
+.mario{
+    position:absolute ;/*para que ele seja posicionado no centro da página*/
+    bottom: 0px;
+    width:150px;
+    
+}
+.jump{
+    animation: jump 600ms ease-out ;
+}
+.clouds {
+    position: absolute;
+    width: 550px;
+    margin: 0;
+    animation: clouds-animation 10s infinite linear;
+}
+
+@keyframes jump { /*por ser um salto ele tem que ter 3 movimentos inicio meio e fim*/
+    0% {
+        bottom: 0;
+    }
+    40%{
+        bottom : 150px;
+    }
+    50%{
+        bottom:150px;
+    }
+    65%{
+        bottom: 150px;
+    }
+    100% {
+        bottom: 0;
+    }
+}
+@keyframes pipe-animation /*key frames são as todos os frames dentro de uma animação*/
+    { 
+    /* comando que fara a pipe ir de 0% da direita até 100% da direita no caso ir para a esquerda*/
+    from{right:-80px; 
+        /*colocar o right do mesmo tamnho do width para imagem começar fora da tela e ter uma animação mais fluida*/
+    }
+    to{
+    right:100%;
+    }
+}
+@keyframes clouds-animation {
+    from{
+        right: -550px;
+    }
+    to{ 
+        right: 100%;
+    }
+}
